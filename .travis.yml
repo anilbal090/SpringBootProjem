@@ -1,0 +1,8 @@
+language: java
+sudo: false # false for faster builds
+script: 
+  - "mvn -f SpringBootOrnek/pom.xml clean install cobertura:cobertura checkstyle:checkstyle pmd:pmd"
+jdk:
+  - oraclejdk8
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
