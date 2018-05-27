@@ -1,5 +1,5 @@
 language: java
-sudo: false # false for faster builds
+sudo: false 
 script: 
   - "mvn -f SpringBootProjem/pom.xml clean install cobertura:cobertura checkstyle:checkstyle pmd:pmd"
 jdk:
